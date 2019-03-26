@@ -1,0 +1,32 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="hijo-dos">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+
+
+    <slot></slot>
+  </template>
+
+  <script>
+   
+    class HijoDos extends Polymer.Element {
+      static get is() { return 'hijo-dos'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'hijo-dos'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(HijoDos.is, HijoDos);
+  </script>
+</dom-module>
